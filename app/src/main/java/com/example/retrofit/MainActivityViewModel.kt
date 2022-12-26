@@ -66,9 +66,6 @@ class MainActivityViewModel : ViewModel() {
         })
     }
 
-    fun searchUser() {
-        TODO("Not yet implemented")
-    }
 
 
 }
