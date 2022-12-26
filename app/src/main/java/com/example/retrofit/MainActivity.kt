@@ -1,9 +1,10 @@
 package com.example.retrofit
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -20,6 +21,10 @@ class MainActivity : AppCompatActivity() {
         initRecyclerView()
         initViewModel()
         searchUser()
+        createUserButton.setOnClickListener {
+          val intern = Intent(this,CreateNewUserActivity::class.java)
+            startActivity(intern)
+        }
     }
 private fun searchUser(){
     search_button.setOnClickListener {
@@ -55,4 +60,5 @@ private fun searchUser(){
         })
         viewModel.getUsersList()
     }
+
 }

@@ -36,7 +36,9 @@ class MainActivityViewModel : ViewModel() {
                 if(response.isSuccessful){
                     recyclerListData.postValue(response.body())
                 }
-
+                else{
+                    recyclerListData.postValue(null)
+                }
             }
 
 
